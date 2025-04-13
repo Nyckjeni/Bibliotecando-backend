@@ -1,0 +1,53 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Logs
+logs/
+*.log
+*.out
+
+# Build
+dist/
+build/
+
+# Ambiente
+.env
+.env.*
+!.env.example
+
+# Testes
+coverage/
+*.lcov
+
+# Diretórios temporários
+tmp/
+temp/
+.cache/
+
+# Banco de dados local
+*.sqlite
+*.sqlite3
+*.db
+*.sql
+*.dump
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# IDEs e editores
+.vscode/
+.idea/
+*.swp
+
+# PM2 (gerenciador de processos)
+pids/
+*.pid
+*.seed
+
+# Outros
+*.tgz
