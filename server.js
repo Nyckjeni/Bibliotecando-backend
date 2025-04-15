@@ -26,6 +26,10 @@ app.get('/', (req, res) => {
 const autorRoutes = require('./routes/autorRoutes');
 app.use('/api/autores', autorRoutes);  // Rota de Autores
 
+// Rota para buscar autor por nome (Adicionada)
+const autorController = require('./controllers/autorController');
+app.get('/api/autores/nome/:nome', autorController.buscarAutorPorNome); // ✅ NOVA LINHA ADICIONADA
+
 // Rotas de Livro
 const livroRoutes = require('./routes/livroRoutes');
 app.use('/api/livros', livroRoutes);  // Rota de Livros

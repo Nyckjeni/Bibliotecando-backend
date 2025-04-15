@@ -32,6 +32,22 @@ exports.buscarAutorPorId = async (req, res) => {
   }
 };
 
+// Buscar autor por nome
+exports.buscarAutorPorNome = async (req, res) => {
+  try {
+    const nomeBuscado = req.params.nome;
+    const autor = await Autor.findOne({ nome: new RegExp(nomeBuscado, 'i') });
+
+
+    if (!autor) return res.status(404).json({ erro: 'Autor não encontrado' });
+
+    res.json(autor);
+  } catch (error) {
+    res.status(500).json({ erro: 'Erro ao buscar autor', detalhes: error.message });
+  }
+};
+
+
 // Atualizar autor
 exports.atualizarAutor = async (req, res) => {
   try {

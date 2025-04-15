@@ -10,11 +10,8 @@ const livroSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  autor: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Autor', // Referência ao modelo Autor
-    required: true
-  },
+  autor:  { type: mongoose.Schema.Types.ObjectId, ref: 'Autor' },
+ 
   imagem: {
     type: String, // Pode ser a URL da imagem
     required: true

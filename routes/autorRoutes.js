@@ -7,6 +7,7 @@ const autorController = require('../controllers/autorController');
 router.post('/', autorController.criarAutor);  // Para criar um autor
 router.get('/', autorController.buscarAutores);  // Para buscar todos os autores
 router.get('/:id', autorController.buscarAutorPorId);  // Para buscar um autor por ID
+router.get('/nome/:nome', autorController.buscarAutorPorNome);
 router.put('/:id', autorController.atualizarAutor);  // Para atualizar um autor
 router.delete('/:id', autorController.deletarAutor);  // Para deletar um autor
 
